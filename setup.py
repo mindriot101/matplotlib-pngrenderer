@@ -11,7 +11,7 @@ setup(
         author='Simon Walker',
         license=read('LICENSE'),
         author_email='s.r.walker101@gmail.com',
-        url='http://example.com',
+        url='https://github.com/mindriot101/matplotlib-pngrenderer',
         packages=['pngrenderer',],
         install_requires=['matplotlib'],
         long_description=read('README.markdown'),
