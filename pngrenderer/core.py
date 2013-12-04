@@ -1,8 +1,8 @@
 import os
 import zipfile
 import tempfile
-from shutil import rmtree
 import matplotlib.pyplot as plt
+
 
 class PNGRenderer(object):
     def __init__(self, stub):
@@ -22,4 +22,3 @@ class PNGRenderer(object):
                 outfile.write(temp_path, os.path.basename(temp_path))
 
     savefig = save_page
-
