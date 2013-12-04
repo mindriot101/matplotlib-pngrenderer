@@ -1,6 +1,3 @@
-import ez_setup
-ez_setup.use_setuptools()
-
 from setuptools import setup
 from setuptools.command.test import test as TestCommand
 import os
