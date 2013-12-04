@@ -42,3 +42,6 @@ Installation: `pip install git+https://github.com/mindriot101/pngrenderer.git`
 
 If this package ever makes it onto pypi then probably the installation will be `pip install matplotlib-pngrenderer`.
 
+## Contributing
+
+To contribute, clone the repository at [this github link](https://github.com/mindriot101/matplotlib-pngrenderer), and run the tests with `python setup.py test`
