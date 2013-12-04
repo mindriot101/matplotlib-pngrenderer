@@ -1,0 +1,35 @@
+<h1 id="png-renderer">PNG Renderer</h1>
+<p>For constructing a zip file of png images. I created this package as I had many plots associated from the output of a plotting script and wanted to keep them together. Similar to <code>matplotlib.backends.PdfPages</code> I wanted to associate the images, but using the <code>png</code> format, so I chose to zip the collection of images. I wanted png images as they contained large amounts of data which created extremely large pdf files.</p>
+<h2 id="example-usage">Example usage</h2>
+<pre class="sourceCode python"><code class="sourceCode python"><span class="ch">import</span> matplotlib.pyplot <span class="ch">as</span> plt
+<span class="ch">from</span> pngrenderer <span class="ch">import</span> PNGRenderer
+
+fig = plt.figure()
+
+plt.plot(...)
+
+<span class="co"># Save the resulting image(s) to &quot;out.zip&quot;</span>
+renderer = PNGRenderer(<span class="st">&quot;out&quot;</span>)
+
+<span class="co"># Save the first png image</span>
+renderer.savefig(<span class="st">&quot;first.png&quot;</span>)
+
+<span class="co"># Alternatively call .save_page</span>
+<span class="co"># renderer.save_page(&quot;first.png&quot;)</span>
+
+<span class="co"># Render the zip file to disk</span>
+renderer.render()
+
+<span class="co"># Alternatively use the context manager</span>
+<span class="ch">from</span> pngrenderer <span class="ch">import</span> png_render
+
+<span class="kw">with</span> png_render(<span class="st">&quot;out&quot;</span>) <span class="ch">as</span> renderer:
+    renderer.savefig()
+
+<span class="co"># The context manager calls the `render` method</span></code></pre>
+<h2 id="requirements-and-installation">Requirements and installation</h2>
+<p>This package requires matplotlib, but no other packages</p>
+<p>Installation: <code>pip install git+https://github.com/mindriot101/pngrenderer.git</code></p>
+<p>If this package ever makes it onto pypi then probably the installation will be <code>pip install matplotlib-pngrenderer</code>.</p>
+<h2 id="contributing">Contributing</h2>
+<p>To contribute, clone the repository at <a href="https://github.com/mindriot101/matplotlib-pngrenderer">this github link</a>, and run the tests with <code>python setup.py test</code></p>

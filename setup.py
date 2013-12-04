@@ -30,7 +30,7 @@ setup(
         url='https://github.com/mindriot101/matplotlib-pngrenderer',
         packages=['pngrenderer',],
         install_requires=['matplotlib'],
-        long_description=read('README.markdown'),
+        long_description=read('doc/description.html'),
         tests_require=['pytest'],
         cmdclass={'test': PyTest},
         )
