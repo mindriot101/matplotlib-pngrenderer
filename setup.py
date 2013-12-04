@@ -19,7 +19,7 @@ class PyTest(TestCommand):
 
 setup(
         name='pngrenderer',
-        version='0.1.1',
+        version='0.1.2',
         description='Render matplotlib png images to a zip file',
         author='Simon Walker',
         license=read('LICENSE'),
